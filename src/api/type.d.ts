@@ -1,0 +1,62 @@
+export type TourRequest = {
+  numOfRows?: number;
+  pageNo?: number;
+  MobileOS: "IOS" | "AND" | "WEB" | "ETC";
+  MobileApp: string;
+  serviceKey: string;
+  _type?: "json";
+  arrange?: "A" | "C" | "D" | "E" | "O" | "Q" | "R" | "S";
+  contentTypeId?: number;
+  mapX: number;
+  mapY: number;
+  radius: number;
+  areaCode?: number;
+  sigunguCode?: number;
+  cat1?: string;
+  cat2?: string;
+  cat3?: string;
+  modifiedtime?: string;
+  lDongRegnCd?: string;
+  lDongSignguCd?: string;
+  lclsSystm1?: string;
+  lclsSystm2?: string;
+  lclsSystm3?: string;
+};
+
+export type TourResponse = {
+  resultCode: string;
+  resultMsg: string;
+  numOfRows: number;
+  pageNo: number;
+  totalCount: number;
+  items: Item[];
+};
+
+type Item = {
+  addr1?: string;
+  addr2?: string;
+  areacode?: number;
+  cat1?: string;
+  cat2?: string;
+  cat3?: string;
+  contentid: number;
+  contenttypeid: number;
+  createdtime: string;
+  dist: number;
+  firstimage?: string;
+  firstimage2?: string;
+  cpyrhtDivCd?: string;
+  mapx?: number;
+  mapy?: number;
+  mlevel?: number;
+  modifiedtime: string;
+  sigungucode?: number;
+  tel?: string;
+  title: string;
+  lDongRegnCd?: string;
+  lDongSignguCd?: string;
+  lclsSystm1?: string;
+  lclsSystm2?: string;
+  lclsSystm3?: string;
+  zipcode?: string;
+};
